@@ -32,6 +32,20 @@ public class CameraRotation : MonoBehaviour
         // rotate cam and orientation
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
         orientation.rotation = Quaternion.Euler(0, yRotation, 0);
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            RaycastHit hit;
+
+            // Lancer le rayon
+            if (Physics.Raycast(transform.position, transform.forward, out hit, 5f))
+            {
+                if(hit.transform.gameObject.name == "waldoHitbox")
+                {
+                    hit.transform.gameObject.GetComponent<onHit>().Hit();
+                }
+            }
+        }
     }
 
 }
