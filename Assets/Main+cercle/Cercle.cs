@@ -7,8 +7,8 @@ using static UnityEngine.Windows.WebCam.VideoCapture;
 public class Cercle : MonoBehaviour
 {
     public NavMeshAgent agent;
-    private Vector3 destination;
-    public GameObject map;
+    public Vector3 destination;
+    //public GameObject map;
     private float mapSize;
 
     public Transform player;
@@ -36,10 +36,11 @@ public class Cercle : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        //Debug.Log("start cercle");
         agent = GetComponent<NavMeshAgent>();
-        mapSize = map.transform.localScale.x/2* map.transform.localScale.x-2;
+        //mapSize = map.transform.localScale.x/2* map.transform.localScale.x-2;
         audioMain = main.GetComponent<AudioSource>();
+        destination = transform.position;
     }
 
     // Update is called once per frame
@@ -53,6 +54,7 @@ public class Cercle : MonoBehaviour
             //Debug.Log(destination);
         }
         agent.SetDestination(destination);
+        //Debug.Log("dest updated");
     }
 
 

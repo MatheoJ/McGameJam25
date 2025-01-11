@@ -80,14 +80,16 @@ public class PlayerMovement : MonoBehaviour
         verticalInput = Input.GetAxisRaw("Vertical");
 
         // when to jump
+        /*
         if (Input.GetKey(jumpKey) && readyToJump && grounded)
         {
             readyToJump = false;
 
-            Jump();
+            //Jump();
 
             Invoke(nameof(ResetJump), jumpCooldown);
         }
+        */
 
         // Check for dash input
         if (Input.GetKeyDown(dashKey) && canDash && !isDashing)
