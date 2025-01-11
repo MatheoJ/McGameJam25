@@ -63,10 +63,10 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 074289946897aae48800542d15885375, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 7ad22d69b1c4c014abb9649071928e6b, type: 2}
+      objectReference: {fileID: 2100000, guid: 924ad8c38d003e9428efa7c9be274627, type: 2}
     - target: {fileID: 919132149155446097, guid: 074289946897aae48800542d15885375, type: 3}
       propertyPath: m_Name
-      value: Perso3V2_Var1
+      value: Perso3V2_Var1 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
