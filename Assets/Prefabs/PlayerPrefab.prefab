@@ -413,6 +413,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   orientation: {fileID: 2113876321225828855}
+  dashKey: 304
+  dashForce: 25
+  dashDuration: 0.2
+  dashCooldown: 1
 --- !u!114 &1463089054960200468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -425,6 +429,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc4e2e14d63dac74d9d112bf13cce8d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerUpInTheGame:
+  - {fileID: 3879896548939657946, guid: 11922f0a76017fe49ae226fb1018baf9, type: 3}
+  - {fileID: 3212263454311658204, guid: e427dcb59637a9346ba150adfec09895, type: 3}
+  cameraTransform: {fileID: 0}
 --- !u!1 &6362706930313467308
 GameObject:
   m_ObjectHideFlags: 0
