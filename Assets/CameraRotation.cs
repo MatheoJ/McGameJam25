@@ -8,8 +8,8 @@ public class CameraRotation : MonoBehaviour
     
     public Transform orientation;
     
-    private float xRotation;
-    private float yRotation;
+    public float xRotation;
+    public float yRotation;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

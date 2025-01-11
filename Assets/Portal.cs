@@ -6,7 +6,7 @@ public class Portal : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     
     public GameObject linkedPortal;
-    public bool canTeleport = true;
+    public bool canTeleport = false;
     void Start()
     {
         
@@ -18,6 +18,20 @@ public class Portal : MonoBehaviour
         
     }
 
+    public void SetCanTeleport(bool canTeleport)
+    {
+        this.canTeleport = canTeleport;
+    }
+    
+    private void DisableAllPortals()
+    {
+        GameObject[] portals = GameObject.FindGameObjectsWithTag("Portal");
+        foreach (GameObject portal in portals)
+        {
+            portal.GetComponent<Portal>().SetCanTeleport(false);
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (!canTeleport)
@@ -27,24 +41,55 @@ public class Portal : MonoBehaviour
         
         if (other.gameObject.CompareTag("Player"))
         {
+            
+            GameObject cameraHolder = GameObject.FindGameObjectWithTag("CameraHolder");
+            BlinkEffect blink = cameraHolder.GetComponentInChildren<BlinkEffect>();
+            // If BlinkEffect is not a child of cameraHolder, just find it differently
+            // e.g. blink = FindObjectOfType<BlinkEffect>();
+
+            // Trigger the blink
+            if (blink != null)
+            {
+                blink.StartBlink();
+            }
+            
             //desactivate linked portal
             //linkedPortal.SetActive(false);
             //teleport player to linked portal
-            linkedPortal.GetComponent<Portal>().canTeleport = false;
+            linkedPortal.GetComponent<Portal>().SetCanTeleport(false);
             other.gameObject.transform.position = linkedPortal.transform.position;
             // get the cameraHolder game object with the tag cameraHolder
-            GameObject cameraHolder = GameObject.FindGameObjectWithTag("CameraHolder");
+            
             // apply the rotation of the linked portal to the cameraHolder
             
             
+            CameraRotation camRotScript = cameraHolder.GetComponent<CameraRotation>();
+
+            // 1) We get the *desired* new rotation (the same math you had before):
             Quaternion originalCameraRotation = cameraHolder.transform.rotation;
             Quaternion inPortalRotation = transform.rotation;
-            Quaternion relativeRotation = originalCameraRotation * Quaternion.Inverse(inPortalRotation);
+
+            // Often this order is best:
+            Quaternion relativeRotation = Quaternion.Inverse(inPortalRotation) * originalCameraRotation;
+            Quaternion newRotation = linkedPortal.transform.rotation * relativeRotation;
+
+            // 2) Convert that to Euler angles
+            Vector3 euler = newRotation.eulerAngles;
             
-            // Then we multiply the linked portal's rotation by that relative offset
-            cameraHolder.transform.rotation = linkedPortal.transform.rotation * relativeRotation;
+            // 3) Apply the new rotation
+            camRotScript.yRotation = euler.y - 180;
             
+            // Update the player velocity of the rigidbody to match the linked portal
+            Rigidbody rb = other.gameObject.GetComponent<Rigidbody>();
+            rb.linearVelocity = linkedPortal.transform.TransformVector(
+                transform.InverseTransformVector(rb.linearVelocity)
+            );
             Debug.Log("Teleporting player to linked portal");
+            
+            
+            DisableAllPortals();
+            
+
         }
         else
         {
