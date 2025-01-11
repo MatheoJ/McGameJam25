@@ -139,6 +139,14 @@ public class PlayerMovement : MonoBehaviour
     {
         readyToJump = true;
     }
+    
+    public IEnumerator ScaleSpeedForDuration(float duration, float scale)
+    {
+        float originalSpeed = moveSpeed;
+        moveSpeed *= scale;
+        yield return new WaitForSeconds(duration);
+        moveSpeed = originalSpeed;
+    }
 
     // ------------------- Dash Routine --------------------
     public IEnumerator Dash()
