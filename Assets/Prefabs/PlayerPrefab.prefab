@@ -324,6 +324,8 @@ MonoBehaviour:
   sensX: 800
   sensY: 800
   orientation: {fileID: 2113876321225828855}
+  xRotation: 0
+  yRotation: 0
 --- !u!1 &5155678489236979141
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,7 +554,7 @@ GameObject:
   - component: {fileID: 9079517071789787903}
   m_Layer: 0
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

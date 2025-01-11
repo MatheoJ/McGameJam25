@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 using static UnityEngine.Windows.WebCam.VideoCapture;
 
 public class Cercle : MonoBehaviour
@@ -29,6 +30,7 @@ public class Cercle : MonoBehaviour
     [Range(0.0f, 5.0f)]
     public float audioStart = 0;
 
+    public Image cercleRouge;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -105,10 +107,27 @@ public class Cercle : MonoBehaviour
             agent.isStopped = true;
             
             StartCoroutine(main.GetComponent<Main>().Appuyer());
+            StartCoroutine(CercleRouge());
+
             audioMain.Stop();
             audioMain.time = audioStart;
             audioMain.Play();
         }
+    }
+
+    IEnumerator CercleRouge()
+    {
+        while (5.5f-cercleRouge.transform.localScale.x > 0.1)
+        {
+            cercleRouge.transform.localScale = Mathf.Lerp(cercleRouge.transform.localScale.x, 5.5f, Time.deltaTime * (main.GetComponent<Main>().vitesse*0.9f)) * Vector3.one;
+            yield return null;
+        }
+        while (cercleRouge.transform.localScale.x > 0.1)
+        {
+            cercleRouge.transform.localScale = Mathf.Lerp(cercleRouge.transform.localScale.x, 0f, Time.deltaTime * (main.GetComponent<Main>().vitesse * 1.1f)) * Vector3.one;
+            yield return null;
+        }
+        cercleRouge.transform.localScale = Vector3.zero;
     }
 
     public void StunHand()
