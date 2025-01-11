@@ -753,6 +753,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6906766685315415749, guid: 1f2c87e45a71b6f47aea96973a356cca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6906766685315415749, guid: 1f2c87e45a71b6f47aea96973a356cca, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 9079517071789787903, guid: 1f2c87e45a71b6f47aea96973a356cca, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1472,7 +1484,7 @@ GameObject:
   - component: {fileID: 1278788150}
   m_Layer: 0
   m_Name: waldoHitbox
-  m_TagString: Untagged
+  m_TagString: Waldo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1737,7 +1749,7 @@ GameObject:
   - component: {fileID: 1655957188}
   m_Layer: 0
   m_Name: waldoHitbox
-  m_TagString: Untagged
+  m_TagString: Waldo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2058,6 +2070,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1777810783}
   m_CullTransparentMesh: 1
+--- !u!1 &1786741229 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6903813036366311947, guid: 6b10cb9b18070cc44bfba504741ab913, type: 3}
+  m_PrefabInstance: {fileID: 7464104326645382044}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1786741232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786741229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 013f8928e2d1c014ca00c049e6e16798, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  main: {fileID: 1806000117}
+--- !u!114 &1806000117 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3168237955166167996, guid: 6b10cb9b18070cc44bfba504741ab913, type: 3}
+  m_PrefabInstance: {fileID: 7464104326645382044}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bb1fb909e922f84ea7d7f806539a38d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1817488026
 GameObject:
   m_ObjectHideFlags: 0
@@ -2183,7 +2224,7 @@ GameObject:
   - component: {fileID: 1857980819}
   m_Layer: 0
   m_Name: waldoHitbox
-  m_TagString: Untagged
+  m_TagString: Waldo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2628,7 +2669,7 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Height: 1
@@ -2758,7 +2799,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6903813036366311947, guid: 6b10cb9b18070cc44bfba504741ab913, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1786741232}
   m_SourcePrefab: {fileID: 100100000, guid: 6b10cb9b18070cc44bfba504741ab913, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
