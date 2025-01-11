@@ -13,6 +13,8 @@ public class ItemScrolling : MonoBehaviour
     private RectTransform containerRectTransform;
     private float distanceToScroll;
     private Vector2 startPosition;
+    
+    public bool isScrolling = false;
 
     void Start()
     {
@@ -45,7 +47,9 @@ public class ItemScrolling : MonoBehaviour
             startPosition.x, 
             startPosition.y - distanceToScroll
         );
-
+        
+        isScrolling = true;
+            
         // 6. Lerp from start to end over timeOfScroll
         while (elapsedTime < timeOfScroll)
         {
@@ -61,6 +65,8 @@ public class ItemScrolling : MonoBehaviour
 
         // 7. Snap to the exact end position at the end
         containerRectTransform.anchoredPosition = endPosition;
+        
+        isScrolling = false;
     }
 
     // Reset the container to its original start position

@@ -40,6 +40,12 @@ public class PowerUpManager : MonoBehaviour
     void tryGetPowerUp()
     {
         // Do a raycast to check if the player is looking at a power up
+        
+        if(currentPowerUpIndex != -1)
+        {
+            return;
+        }
+        
         RaycastHit hit;
         if (Physics.Raycast(cameraTransform.position, cameraTransform.forward, out hit, 10))
         {
@@ -61,7 +67,7 @@ public class PowerUpManager : MonoBehaviour
     
     void tryExecutePowerUp()
     {
-        if (currentPowerUpIndex != -1)
+        if (currentPowerUpIndex != -1 && !itemScrolling.isScrolling)
         {
             powerUpInTheGame[currentPowerUpIndex].ExecutePowerUp();
             currentPowerUpIndex = -1;
