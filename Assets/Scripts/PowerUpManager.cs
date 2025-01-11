@@ -4,14 +4,19 @@ using UnityEngine;
 public class PowerUpManager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    private PowerUpInterface currentPowerUp;
-    private int currentPowerUpIndex = 0;
+    private int currentPowerUpIndex;
     public List<PowerUpInterface> powerUpInTheGame;
+    
+    //Image component in canvas to display power up
+    public UnityEngine.UI.Image powerUpImage;
+    public Sprite defaultPowerUpImage;
+    
     
     public Transform cameraTransform;
     void Start()
     {
         currentPowerUpIndex = -1;
+        powerUpImage.sprite = defaultPowerUpImage;
     }
 
     // Update is called once per frame
@@ -42,6 +47,7 @@ public class PowerUpManager : MonoBehaviour
                 Debug.Log("Power up obtained");
                 Destroy(hit.transform.gameObject);
                 currentPowerUpIndex = Random.Range(0, powerUpInTheGame.Count);
+                powerUpImage.sprite = powerUpInTheGame[currentPowerUpIndex].powerUpImage;
             }
             else
             {
@@ -56,6 +62,7 @@ public class PowerUpManager : MonoBehaviour
         {
             powerUpInTheGame[currentPowerUpIndex].ExecutePowerUp();
             currentPowerUpIndex = -1;
+            powerUpImage.sprite = defaultPowerUpImage;
         }
         else
         {
