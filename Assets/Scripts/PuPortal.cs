@@ -17,6 +17,10 @@ public class PowerUpPortal : PowerUpInterface
     //Implement virtual function ExecutePowerUp()
     public override void ExecutePowerUp()
     {
-    
+        GameObject[] portals = GameObject.FindGameObjectsWithTag("Portal");
+        foreach (GameObject portal in portals)
+        {
+            portal.GetComponent<Portal>().SetCanTeleport(true);
+        }
     }
 }

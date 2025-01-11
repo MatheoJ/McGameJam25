@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ObjectForPowerUp
   - CameraHolder
+  - Portal
   layers:
   - Default
   - TransparentFX
