@@ -8,8 +8,8 @@ public class CameraRotation : MonoBehaviour
     
     public Transform orientation;
     
-    private float xRotation;
-    private float yRotation;
+    public float xRotation;
+    public float yRotation;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -40,7 +40,7 @@ public class CameraRotation : MonoBehaviour
             // Lancer le rayon
             if (Physics.Raycast(transform.position, transform.forward, out hit, 5f))
             {
-                if(hit.transform.gameObject.name == "waldoHitbox")
+                if(hit.transform.gameObject.tag == "Waldo")
                 {
                     hit.transform.gameObject.GetComponent<onHit>().Hit();
                 }

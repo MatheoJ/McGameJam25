@@ -6,6 +6,8 @@ TagManager:
   tags:
   - ObjectForPowerUp
   - CameraHolder
+  - Portal
+  - Waldo
   layers:
   - Default
   - TransparentFX
