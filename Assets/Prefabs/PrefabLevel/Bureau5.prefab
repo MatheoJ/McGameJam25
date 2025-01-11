@@ -26,7 +26,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.265, y: 0.694, z: 0.534}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7293644329064244671}
@@ -155,6 +155,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.224
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 44351a674cae516449c757179f421dba, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 229b9f6374cf7c74bb99431b38c14f98, type: 2}
     - target: {fileID: 919132149155446097, guid: 44351a674cae516449c757179f421dba, type: 3}
       propertyPath: m_Name
       value: Bureau (5)
@@ -225,6 +229,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 4.986
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 93f9e1f6b3f767d498b1c52fa67a914a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 044027dccd4d11945829b64f50fceb98, type: 2}
     - target: {fileID: 919132149155446097, guid: 93f9e1f6b3f767d498b1c52fa67a914a, type: 3}
       propertyPath: m_Name
       value: Chaise (6)
@@ -353,6 +361,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -3.745
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 93f9e1f6b3f767d498b1c52fa67a914a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 044027dccd4d11945829b64f50fceb98, type: 2}
     - target: {fileID: 919132149155446097, guid: 93f9e1f6b3f767d498b1c52fa67a914a, type: 3}
       propertyPath: m_Name
       value: Chaise (7)
@@ -427,6 +439,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 56c2cd64a5726dd4a9a2cfd332febfde, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 19a4bbb85e6542149a16dbf09e87cf33, type: 2}
     - target: {fileID: 919132149155446097, guid: 56c2cd64a5726dd4a9a2cfd332febfde, type: 3}
       propertyPath: m_Name
       value: Plante (2)
