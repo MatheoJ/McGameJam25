@@ -4,7 +4,7 @@ using TMPro;
 
 public class Stopwatch : MonoBehaviour
 {
-    public TextMeshProUGUI stopwatchText;
+    public TextMeshProUGUI stopwatchText; // UI 
     private float elapsedTime = 0f;
     private bool isRunning = false;
 
