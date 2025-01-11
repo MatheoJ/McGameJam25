@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9b8ed88c8ca4e654995bea93b9336ba6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ac4403676b9bf234ea245edc36f3a21e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -101,8 +101,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.32, y: 4.07, z: 5.7}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4912536764358886189}
   - {fileID: 7504645175167450950}
@@ -334,7 +334,7 @@ GameObject:
   - component: {fileID: 3605342220521510475}
   m_Layer: 0
   m_Name: waldoHitbox
-  m_TagString: Untagged
+  m_TagString: Waldo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -348,9 +348,9 @@ Transform:
   m_GameObject: {fileID: 9171794856783403941}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.506, y: 0.342, z: 0.096}
-  m_LocalScale: {x: 1, y: 1, z: -0.19}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -0.595, y: 0.331, z: 0}
+  m_LocalScale: {x: 0.08, y: 0.08, z: -0.015199999}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 647715367006843178}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -426,8 +426,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.23928452, y: 0.35298252, z: 0.16370404}
-  m_Center: {x: 0.3647294, y: -0.286067, z: 0.41814768}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3605342220521510475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -441,3 +441,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 9150375637509943240}
+  cercle: {fileID: 0}
+  stunMode: 1
