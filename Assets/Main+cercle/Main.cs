@@ -10,11 +10,13 @@ public class Main : MonoBehaviour
     public float vitesse = 5;
     private bool recherche = true;
     //public Cercle cercle;
+    public Collider doigt;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         saveHauteur = hauteur;
+        doigt = GetComponentInChildren<Collider>();
     }
 
     // Update is called once per frame
