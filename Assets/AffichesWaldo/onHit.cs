@@ -3,6 +3,8 @@ using UnityEngine;
 public class onHit : MonoBehaviour
 {
     public GameObject canvas;
+    public Cercle cercle;
+    public bool stunMode=true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,6 +18,16 @@ public class onHit : MonoBehaviour
     }
     public void Hit()
     {
-        canvas.SetActive(false);
+        if (canvas != null)
+        {
+            canvas.SetActive(false);
+        }
+        if (cercle != null)
+        {
+            if(stunMode) cercle.StunHand();
+            else cercle.baitHand();
+        }
+
+
     }
 }

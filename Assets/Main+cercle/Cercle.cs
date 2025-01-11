@@ -1,9 +1,10 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class Cercle : MonoBehaviour
 {
-    private NavMeshAgent agent;
+    public NavMeshAgent agent;
     private Vector3 destination;
     public GameObject map;
     private float mapSize;
@@ -15,6 +16,15 @@ public class Cercle : MonoBehaviour
     public float ecartTypeNormale=2;//respect de la ditance moyenne
 
     public bool deplacementAvance = false;
+
+    public GameObject main;
+
+    public bool recherche=true;
+
+
+    public Transform baitPoint;
+
+
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,7 +37,7 @@ public class Cercle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(destination, transform.position) < 0.5f)
+        if (Vector3.Distance(destination, transform.position) < 0.5f && recherche)
         {
             if(deplacementAvance) MoveToGaussianPoint(player, agent, 0, ecartTypeNormale);
             else destination = new Vector3(Random.Range(-mapSize,mapSize), transform.position.y, Random.Range(-mapSize,mapSize));
@@ -81,4 +91,41 @@ public class Cercle : MonoBehaviour
             //agent.SetDestination(hit.position);
         }
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.name == "Player" && recherche)
+        {
+            recherche = false;
+            agent.isStopped = true;
+            StartCoroutine(main.GetComponent<Main>().Appuyer());
+        }
+    }
+
+    public void StunHand()
+    {
+        Debug.Log("starting coroutine");
+        StartCoroutine(Stun());
+    }
+
+    IEnumerator Stun()
+    {
+        //agent.SetDestination(transform.position);
+        //agent.Stop();
+        agent.isStopped = true;
+        recherche = false;
+        
+        yield return new WaitForSeconds(2f);
+        recherche = true;
+        agent.isStopped = false;
+    }
+
+    public void baitHand()
+    {
+        Debug.Log("baiting Hand");
+        // agent.isStopped = true;
+        destination =baitPoint.position;
+        //agent.isStopped = false;
+        //agent.ResetPath();
+    }
+
 }
