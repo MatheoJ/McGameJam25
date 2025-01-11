@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
+using static UnityEngine.Windows.WebCam.VideoCapture;
 
 public class Cercle : MonoBehaviour
 {
@@ -24,14 +25,19 @@ public class Cercle : MonoBehaviour
 
     public Transform baitPoint;
 
+    private AudioSource audioMain;
+    [Range(0.0f, 5.0f)]
+    public float audioStart = 0;
 
-    
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         
         agent = GetComponent<NavMeshAgent>();
         mapSize = map.transform.localScale.x/2* map.transform.localScale.x-2;
+        audioMain = main.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -42,7 +48,7 @@ public class Cercle : MonoBehaviour
             if(deplacementAvance) MoveToGaussianPoint(player, agent, 0, ecartTypeNormale);
             else destination = new Vector3(Random.Range(-mapSize,mapSize), transform.position.y, Random.Range(-mapSize,mapSize));
 
-            Debug.Log(destination);
+            //Debug.Log(destination);
         }
         agent.SetDestination(destination);
     }
@@ -93,11 +99,15 @@ public class Cercle : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.name == "Player" && recherche)
+        if(other.gameObject.tag == "Player" && recherche)
         {
             recherche = false;
             agent.isStopped = true;
+            
             StartCoroutine(main.GetComponent<Main>().Appuyer());
+            audioMain.Stop();
+            audioMain.time = audioStart;
+            audioMain.Play();
         }
     }
 
