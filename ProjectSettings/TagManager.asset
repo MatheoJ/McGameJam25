@@ -9,6 +9,7 @@ TagManager:
   - Portal
   - Waldo
   - Puzzle
+  - Cercle
   layers:
   - Default
   - TransparentFX
