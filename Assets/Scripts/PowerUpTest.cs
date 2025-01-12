@@ -6,6 +6,7 @@ public class PowerUpTest : PowerUpInterface
    
     void Start()
     {
+        
     }
 
     // Update is called once per frame

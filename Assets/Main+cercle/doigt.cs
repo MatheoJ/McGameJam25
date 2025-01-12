@@ -16,7 +16,7 @@ public class doigt : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && other is CapsuleCollider)
         {
             main.PlayerHit();
         }
