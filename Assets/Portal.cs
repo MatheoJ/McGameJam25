@@ -8,11 +8,15 @@ public class Portal : MonoBehaviour
     public GameObject linkedPortal;
     public bool canTeleport = false;
     
+    public GameObject openPortal;
+    public GameObject closedPortal;
+    
     //audio source
     public AudioSource audioSource;
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        openPortal.SetActive(false);
     }
 
     // Update is called once per frame
@@ -24,6 +28,16 @@ public class Portal : MonoBehaviour
     public void SetCanTeleport(bool canTeleport)
     {
         this.canTeleport = canTeleport;
+        if (canTeleport)
+        {
+            openPortal.SetActive(true);
+            closedPortal.SetActive(false);
+        }
+        else
+        {
+            openPortal.SetActive(false);
+            closedPortal.SetActive(true);
+        }
     }
     
     private void DisableAllPortals()
