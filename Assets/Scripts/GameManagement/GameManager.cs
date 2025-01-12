@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
     private List<GameObject> allPuzzles;
     private List<Transform> allPuzzleLocations;
 
+    public GameObject exitLadder;
+
     private int nbPuzzlesInScene = 4;
     private int nbPuzzlesCompleted = 0;
 
@@ -32,6 +34,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        exitLadder.SetActive(false);
+        
         // Stopwatch initialization
         stopwatch = FindFirstObjectByType<Stopwatch>();
         stopwatch.StartStopwatch();
@@ -144,6 +148,8 @@ public class GameManager : MonoBehaviour
             findExitGreyCheckbox.gameObject.SetActive(false);
             findExitGreyCheckbox.gameObject.SetActive(true);
             findExitText.color = Color.black;
+            
+            exitLadder.SetActive(true);
 
             // Enable/open Exit door     /!\ TO DO
         }
