@@ -103,15 +103,15 @@ PrefabInstance:
     - target: {fileID: -5265558064501858721, guid: 74eb78d0b9b20314e9cb7d5a6df7f0c1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: a1eefc9363e5ebb4bbc2698365248877, type: 2}
+      objectReference: {fileID: 2100000, guid: b7f6da6b768c43d41a26cb2aaa7957db, type: 2}
     - target: {fileID: 919132149155446097, guid: 74eb78d0b9b20314e9cb7d5a6df7f0c1, type: 3}
       propertyPath: m_Name
-      value: Poster 1
+      value: Poster 2
       objectReference: {fileID: 0}
     - target: {fileID: 2538057606817204104, guid: 74eb78d0b9b20314e9cb7d5a6df7f0c1, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: a1eefc9363e5ebb4bbc2698365248877, type: 2}
+      objectReference: {fileID: 2100000, guid: b7f6da6b768c43d41a26cb2aaa7957db, type: 2}
     - target: {fileID: 2898633640331201048, guid: 74eb78d0b9b20314e9cb7d5a6df7f0c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.1
