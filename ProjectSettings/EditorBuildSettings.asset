@@ -8,12 +8,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 0
+    path: Assets/Scenes/ProgWaldo_Blocking_Scene 1.unity
+    guid: 4a370cca03785044290c7600f6203de0
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 51fd51a90f34f904281df65c14f57ab0
   - enabled: 1
-    path: Assets/Scenes/ProgWaldo_Blocking_Scene 1.unity
-    guid: 4a370cca03785044290c7600f6203de0
+    path: Assets/Scenes/GamePlayScene.unity
+    guid: e7830740341967b4eb6f5bdde1b86680
   - enabled: 1
     path: Assets/Scenes/EndMenu.unity
     guid: 0ec7d145ea4ce6449a1cb3d9ba1d93fc
