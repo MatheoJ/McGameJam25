@@ -74,6 +74,11 @@ public class GameManager : MonoBehaviour
 
 
             InitializeWaldoPuzzles();
+            
+            //Get all audio listener in the scene
+            
+            //Log there owner
+  
     }
 
 
@@ -146,7 +151,7 @@ public class GameManager : MonoBehaviour
             puzzleTick.gameObject.SetActive(true);
 
             findExitGreyCheckbox.gameObject.SetActive(false);
-            findExitGreyCheckbox.gameObject.SetActive(true);
+            findExitBlackCheckbox.gameObject.SetActive(true);
             findExitText.color = Color.black;
             
             exitLadder.SetActive(true);

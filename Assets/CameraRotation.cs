@@ -40,6 +40,7 @@ public class CameraRotation : MonoBehaviour
             // Lancer le rayon
             if (Physics.Raycast(transform.position, transform.forward, out hit, 5f))
             {
+                Debug.Log("ici "+hit.collider.gameObject.name);
                 if(hit.transform.gameObject.tag == "Waldo")
                 {
                     hit.transform.gameObject.GetComponent<onHit>().Hit();

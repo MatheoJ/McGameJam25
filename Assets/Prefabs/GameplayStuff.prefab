@@ -192,17 +192,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2775922725168705354 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4221507925659950380, guid: 1f2c87e45a71b6f47aea96973a356cca, type: 3}
-  m_PrefabInstance: {fileID: 2023171855403741798}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &3827658032086319198 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2958111403653034552, guid: 1f2c87e45a71b6f47aea96973a356cca, type: 3}
@@ -261,6 +250,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9082589774251725637 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7068425258230276387, guid: 1f2c87e45a71b6f47aea96973a356cca, type: 3}
+  m_PrefabInstance: {fileID: 2023171855403741798}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &4833667620086468752
@@ -400,7 +400,7 @@ PrefabInstance:
     - target: {fileID: 1700038932039004647, guid: 85d808da1098d984685bac8d305eeb02, type: 3}
       propertyPath: findExitGreyCheckbox
       value: 
-      objectReference: {fileID: 2775922725168705354}
+      objectReference: {fileID: 9082589774251725637}
     - target: {fileID: 1700038932039004647, guid: 85d808da1098d984685bac8d305eeb02, type: 3}
       propertyPath: findExitBlackCheckbox
       value: 
