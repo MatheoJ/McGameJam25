@@ -1,39 +1,33 @@
 using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     private Stopwatch stopwatch;
 
-    [Header("Waldo puzzles")]
-    public GameObject puzzle0;
-    public GameObject puzzle1;
-    public GameObject puzzle2;
-    public GameObject puzzle3;
-    public GameObject puzzle4;
-    public GameObject puzzle5;
-    public GameObject puzzle6;
-    public GameObject puzzle7;
-    public GameObject puzzle8;
-    public GameObject puzzle9;
+    [Header("Waldo Puzzles")]
+    public Transform puzzlesParent;
+    public Transform puzzleLocationsParent;
 
-    [Header("Waldo puzzle locations")]
-    public Transform puzzleLocation0;
-    public Transform puzzleLocation1;
-    public Transform puzzleLocation2;
-    public Transform puzzleLocation3;
-    public Transform puzzleLocation4;
-    public Transform puzzleLocation5;
-    public Transform puzzleLocation6;
-    public Transform puzzleLocation7;
-    public Transform puzzleLocation8;
-    public Transform puzzleLocation9;
+    [Header("NoteBook")]
+    public TextMeshProUGUI puzzleText;
+    public TextMeshProUGUI findExitText;
+    public Image findExitBlackCheckbox;
+    public Image findExitGreyCheckbox;
+    public Image puzzleTick;
+    public Image findExitTick;
+    public Color greyColor = Color.grey;
+
 
     private List<GameObject> allPuzzles;
     private List<Transform> allPuzzleLocations;
 
     private int nbPuzzlesInScene = 4;
-    private int nbPuzzlesDone = 0;
+    private int nbPuzzlesCompleted = 0;
+
+    private int nbBonusFound; // can be cool for the end stats (end menu)
 
 
     void Start()
@@ -42,12 +36,28 @@ public class GameManager : MonoBehaviour
         stopwatch = FindFirstObjectByType<Stopwatch>();
         stopwatch.StartStopwatch();
 
-        // Puzzles initialization
-        allPuzzles = new List<GameObject> {puzzle0, puzzle1, puzzle2, puzzle3, puzzle4,};
-        //puzzle4, puzzle5, puzzle6, puzzle7, puzzle8, puzzle9};
+        // Notebook initialization
+        UpdatePuzzleText();
+        findExitText.color = greyColor;
+        puzzleTick.gameObject.SetActive(false);
+        findExitTick.gameObject.SetActive(false);
 
-        allPuzzleLocations = new List<Transform> {puzzleLocation0, puzzleLocation1, puzzleLocation2, puzzleLocation3,
-                         puzzleLocation4, puzzleLocation5, puzzleLocation6, puzzleLocation7, puzzleLocation8, puzzleLocation9};
+
+        // Puzzles initialization
+          // Puzzles
+        allPuzzles = new List<GameObject>();
+        foreach (Transform child in puzzlesParent)
+        {
+            allPuzzles.Add(child.gameObject);
+        }
+
+          // Puzzle locations
+        allPuzzleLocations = new List<Transform>();
+        foreach (Transform child in puzzleLocationsParent)
+        {
+            allPuzzleLocations.Add(child);
+        }
+
         InitializeWaldoPuzzles();
     }
 
@@ -97,5 +107,44 @@ public class GameManager : MonoBehaviour
             selectedPuzzle.transform.position = selectedLocations[i].position;
             selectedPuzzle.transform.rotation = selectedLocations[i].rotation;
         }
+    }
+
+
+
+    //// PUZZLES ////
+
+    private void UpdatePuzzleText()
+    {
+        puzzleText.text = ":  " + nbPuzzlesCompleted + " / " + nbPuzzlesInScene;
+    }
+    public void puzzleCompleted()
+    {
+        if (nbPuzzlesCompleted < nbPuzzlesInScene)
+        {
+            nbPuzzlesCompleted++;
+            UpdatePuzzleText();
+        }
+
+        // If all puzzles are completed
+        if (nbPuzzlesCompleted == nbPuzzlesInScene)
+        {
+            puzzleTick.gameObject.SetActive(true);
+            // Add vfx effect on checkbox?
+            findExitText.color = Color.black;
+            // Enable/open Exit door     /!\ TO DO
+        }
+    }
+
+    public void ExitCompleted()
+    {
+        findExitTick.gameObject.SetActive(true);
+    }
+
+
+
+    //// BONUS ////
+    public void IncrementNbBonusFound() // delete this comment when function used
+    {
+        nbBonusFound++;
     }
 }
