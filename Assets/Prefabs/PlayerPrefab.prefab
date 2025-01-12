@@ -2078,6 +2078,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   orientation: {fileID: 2113876321225828855}
+  FootstepAudioSource: {fileID: 7416688396631225149}
   dashKey: 304
   dashForce: 150
   dashDuration: 0.9
@@ -2135,9 +2136,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d733326137b5e0640bc6552102fe3c58, type: 3}
-  m_Resource: {fileID: 8300000, guid: d733326137b5e0640bc6552102fe3c58, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: ab78b1787a7c2f941bab4f3351497541, type: 3}
+  m_Resource: {fileID: 8300000, guid: ab78b1787a7c2f941bab4f3351497541, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
