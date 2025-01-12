@@ -7,9 +7,12 @@ public class Portal : MonoBehaviour
     
     public GameObject linkedPortal;
     public bool canTeleport = false;
+    
+    //audio source
+    public AudioSource audioSource;
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -52,6 +55,8 @@ public class Portal : MonoBehaviour
             {
                 blink.StartBlink();
             }
+            
+            audioSource.Play();
             
             //desactivate linked portal
             //linkedPortal.SetActive(false);

@@ -8,11 +8,13 @@ public class ItemScrolling : MonoBehaviour
     public Image FirstItemImage;
     public Image LastItemImage;
 
-    public float timeOfScroll = 3.0f;
+    public float timeOfScroll = 3.8f;
 
     private RectTransform containerRectTransform;
     private float distanceToScroll;
     private Vector2 startPosition;
+    
+    public AudioSource audioSource;
     
     public bool isScrolling = false;
 
@@ -25,7 +27,7 @@ public class ItemScrolling : MonoBehaviour
         distanceToScroll = LastItemImage.rectTransform.anchoredPosition.y 
                            - FirstItemImage.rectTransform.anchoredPosition.y;
 
-        // 3. Start scrolling immediately
+        audioSource = GetComponent<AudioSource>();
         
     }
 
@@ -49,6 +51,7 @@ public class ItemScrolling : MonoBehaviour
         );
         
         isScrolling = true;
+        audioSource.Play();
             
         // 6. Lerp from start to end over timeOfScroll
         while (elapsedTime < timeOfScroll)
