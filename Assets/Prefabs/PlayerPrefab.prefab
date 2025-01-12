@@ -1474,7 +1474,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: f3f111ee9fff33c4ba474e2da05d159e, type: 3}
   m_Resource: {fileID: 8300000, guid: f3f111ee9fff33c4ba474e2da05d159e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.171
+  m_Volume: 0.38
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2179,7 +2179,7 @@ MonoBehaviour:
   FootstepAudioSource: {fileID: 7416688396631225149}
   dashKey: 304
   dashForce: 150
-  dashDuration: 0.9
+  dashDuration: 0.7
   dashCooldown: 1
 --- !u!114 &1463089054960200468
 MonoBehaviour:
@@ -3014,7 +3014,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.41003418, y: -0.25001526}
+  m_AnchoredPosition: {x: -0.41003418, y: -0.25}
   m_SizeDelta: {x: 1078.3, y: 401.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5247523926690415821
