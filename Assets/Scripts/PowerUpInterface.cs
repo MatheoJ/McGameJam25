@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PowerUpInterface : MonoBehaviour
@@ -5,6 +6,10 @@ public class PowerUpInterface : MonoBehaviour
     //Take an image that will be displayed in the UI
     public Sprite powerUpImage;
     
+    
+
+
+
     // Virtual function ExecutePowerUp() that will be overridden by the power up classes
     public virtual void ExecutePowerUp()
     {

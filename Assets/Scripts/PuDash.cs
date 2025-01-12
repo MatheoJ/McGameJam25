@@ -4,9 +4,8 @@ public class PowerUpDash : PowerUpInterface
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
    
-    void Start()
-    {
-    }
+    public AudioSource powerUpSound;
+   
 
     // Update is called once per frame
     void Update()
@@ -23,5 +22,12 @@ public class PowerUpDash : PowerUpInterface
         PlayerMovement playerMovement = player.GetComponent<PlayerMovement>();
         //Call the Dash function from the PlayerMovement component
         playerMovement.StartCoroutine(playerMovement.Dash());
+        
+        
+        powerUpSound.Play();
+        if (powerUpSound != null)
+        {
+            
+        }
     }
 }
