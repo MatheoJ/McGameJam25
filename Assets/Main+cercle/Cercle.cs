@@ -103,7 +103,7 @@ public class Cercle : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player" && recherche)
+        if(other.gameObject.tag == "Player" && recherche && other is CapsuleCollider)
         {
             recherche = false;
             agent.isStopped = true;
