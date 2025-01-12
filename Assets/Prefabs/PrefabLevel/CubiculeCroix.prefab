@@ -87,6 +87,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -267.245
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a44fa8aeec329a0489be7bdee2e541e9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4cc252e1704ba6e489c2aa8a65c8dd71, type: 2}
     - target: {fileID: 919132149155446097, guid: a44fa8aeec329a0489be7bdee2e541e9, type: 3}
       propertyPath: m_Name
       value: Cubicule_Petit (2)
@@ -149,6 +153,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -86.186005
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 398151c5455025045bd1cbd88e5747cf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4cc252e1704ba6e489c2aa8a65c8dd71, type: 2}
     - target: {fileID: 919132149155446097, guid: 398151c5455025045bd1cbd88e5747cf, type: 3}
       propertyPath: m_Name
       value: Cubicule_Grand (2)
@@ -215,6 +223,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -444.50598
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a44fa8aeec329a0489be7bdee2e541e9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4cc252e1704ba6e489c2aa8a65c8dd71, type: 2}
     - target: {fileID: 919132149155446097, guid: a44fa8aeec329a0489be7bdee2e541e9, type: 3}
       propertyPath: m_Name
       value: Cubicule_Petit (3)
@@ -277,6 +289,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 398151c5455025045bd1cbd88e5747cf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4cc252e1704ba6e489c2aa8a65c8dd71, type: 2}
     - target: {fileID: 919132149155446097, guid: 398151c5455025045bd1cbd88e5747cf, type: 3}
       propertyPath: m_Name
       value: Cubicule_Grand (1)
