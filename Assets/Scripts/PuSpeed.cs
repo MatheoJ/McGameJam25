@@ -6,11 +6,8 @@ public class PowerUpSpeed : PowerUpInterface
     public float speedMultiplier = 2.7f;
     public float duration = 5.0f;
     
-    
-    void Start()
-    {
-    }
-
+    public AudioSource powerUpSound;
+ 
     // Update is called once per frame
     void Update()
     {
@@ -26,5 +23,12 @@ public class PowerUpSpeed : PowerUpInterface
         PlayerMovement playerMovement = player.GetComponent<PlayerMovement>();
         //Call the Dash function from the PlayerMovement component
         playerMovement.StartCoroutine(playerMovement.ScaleSpeedForDuration(duration,speedMultiplier));
+        
+        
+        powerUpSound.Play();
+        if (powerUpSound != null)
+        {
+            
+        }
     }
 }

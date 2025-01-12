@@ -61,19 +61,19 @@ public class Cercle : MonoBehaviour
 
     float RandomNormal(float mean, float stdDev)
     {
-        float u1 = Random.Range(0f, 1f); // Premier nombre aléatoire
-        float u2 = Random.Range(0f, 1f); // Deuxième nombre aléatoire
+        float u1 = Random.Range(0f, 1f); // Premier nombre alï¿½atoire
+        float u2 = Random.Range(0f, 1f); // Deuxiï¿½me nombre alï¿½atoire
 
         // Transformation de Box-Muller
         float randStdNormal = Mathf.Sqrt(-2.0f * Mathf.Log(u1)) * Mathf.Cos(2.0f * Mathf.PI * u2);
 
-        // Appliquer la moyenne et l'écart type
+        // Appliquer la moyenne et l'ï¿½cart type
         return mean + stdDev * randStdNormal;
     }
 
     Vector3 GetRandomPointAroundPlayer(Vector3 playerPosition, float meanDistance, float stdDevDistance)
     {
-        /*// Générer des offsets selon une loi normale
+        /*// Gï¿½nï¿½rer des offsets selon une loi normale
         float offsetX = RandomNormal(0f, stdDevDistance);
         float offsetZ = RandomNormal(0f, stdDevDistance);*/
 
@@ -93,7 +93,7 @@ public class Cercle : MonoBehaviour
     {
         Vector3 randomPoint = GetRandomPointAroundPlayer(player.position, meanDistance, stdDevDistance);
 
-        // Vérifier si le point est valide sur le NavMesh
+        // Vï¿½rifier si le point est valide sur le NavMesh
         NavMeshHit hit;
         if (NavMesh.SamplePosition(randomPoint, out hit, meanDistance + stdDevDistance, NavMesh.AllAreas))
         {
@@ -138,7 +138,7 @@ public class Cercle : MonoBehaviour
         StartCoroutine(Stun());
     }
 
-    IEnumerator Stun()
+    public IEnumerator Stun()
     {
         //agent.SetDestination(transform.position);
         //agent.Stop();
