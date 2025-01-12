@@ -41,24 +41,35 @@ public class GameManager : MonoBehaviour
         findExitText.color = greyColor;
         puzzleTick.gameObject.SetActive(false);
         findExitTick.gameObject.SetActive(false);
+        findExitBlackCheckbox.gameObject.SetActive(false);
 
 
         // Puzzles initialization
           // Puzzles
         allPuzzles = new List<GameObject>();
+        //Debug.Log("puzzles : ");
         foreach (Transform child in puzzlesParent)
         {
+            //Debug.Log(child);
             allPuzzles.Add(child.gameObject);
         }
 
           // Puzzle locations
         allPuzzleLocations = new List<Transform>();
+        //Debug.Log("puzzle locations : ");
         foreach (Transform child in puzzleLocationsParent)
         {
+            //Debug.Log(child);
             allPuzzleLocations.Add(child);
         }
 
-        InitializeWaldoPuzzles();
+        ////Debug.Log("allpuzzles : ");
+        ////foreach (var child in allPuzzles) {
+        ////    Debug.Log(child.name);
+        ////}
+
+
+            InitializeWaldoPuzzles();
     }
 
 
@@ -125,12 +136,15 @@ public class GameManager : MonoBehaviour
             UpdatePuzzleText();
         }
 
-        // If all puzzles are completed
+        //If all puzzles are completed
         if (nbPuzzlesCompleted == nbPuzzlesInScene)
         {
             puzzleTick.gameObject.SetActive(true);
-            // Add vfx effect on checkbox?
+
+            findExitGreyCheckbox.gameObject.SetActive(false);
+            findExitGreyCheckbox.gameObject.SetActive(true);
             findExitText.color = Color.black;
+
             // Enable/open Exit door     /!\ TO DO
         }
     }
