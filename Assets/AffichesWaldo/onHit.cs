@@ -9,7 +9,7 @@ public class onHit : MonoBehaviour
     public bool stunMode=true;
     //public VisualEffectAsset effectAsset;
     public VisualEffect VisualEffect;
-    public AudioClip ping;
+    //public AudioClip ping;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
