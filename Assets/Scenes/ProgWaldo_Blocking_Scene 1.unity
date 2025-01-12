@@ -69759,6 +69759,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 567844879}
+    - target: {fileID: 1896052281332381458, guid: 6b10cb9b18070cc44bfba504741ab913, type: 3}
+      propertyPath: moyenneDistanceNormale
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8083702359219464821, guid: 6b10cb9b18070cc44bfba504741ab913, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.96
