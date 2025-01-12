@@ -68,8 +68,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collier_Chien
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 071b4a503d6ac96429ce61b5fe2a816c, type: 3}
+      propertyPath: m_TagString
+      value: ObjectForPowerUp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 071b4a503d6ac96429ce61b5fe2a816c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 411682807969546491}
   m_SourcePrefab: {fileID: 100100000, guid: 071b4a503d6ac96429ce61b5fe2a816c, type: 3}
+--- !u!1 &2124324485033547626 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 071b4a503d6ac96429ce61b5fe2a816c, type: 3}
+  m_PrefabInstance: {fileID: 1277461042592213563}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &411682807969546491
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124324485033547626}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8586106969393904961, guid: 071b4a503d6ac96429ce61b5fe2a816c, type: 3}
