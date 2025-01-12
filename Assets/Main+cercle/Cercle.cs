@@ -51,7 +51,7 @@ public class Cercle : MonoBehaviour
             if(deplacementAvance) MoveToGaussianPoint(player, agent, 0, ecartTypeNormale);
             else destination = new Vector3(Random.Range(-mapSize,mapSize), transform.position.y, Random.Range(-mapSize,mapSize));
 
-            //Debug.Log(destination);
+            Debug.Log(destination);
         }
         agent.SetDestination(destination);
         //Debug.Log("dest updated");
