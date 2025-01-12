@@ -14,9 +14,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 51fd51a90f34f904281df65c14f57ab0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GamePlayScene.unity
     guid: e7830740341967b4eb6f5bdde1b86680
+  - enabled: 1
+    path: Assets/Scenes/Waldo_Blocking_Scene.unity
+    guid: 14188df3001b2704daaa0ade08393010
   - enabled: 1
     path: Assets/Scenes/EndMenu.unity
     guid: 0ec7d145ea4ce6449a1cb3d9ba1d93fc
