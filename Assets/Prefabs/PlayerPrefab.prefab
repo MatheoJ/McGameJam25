@@ -767,7 +767,7 @@ Transform:
   m_GameObject: {fileID: 1590436226180092500}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.76, z: 0}
+  m_LocalPosition: {x: 0, y: 2.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2589,7 +2589,7 @@ MonoBehaviour:
   orientation: {fileID: 2113876321225828855}
   dashKey: 304
   dashForce: 150
-  dashDuration: 1.6
+  dashDuration: 0.9
   dashCooldown: 1
 --- !u!114 &1463089054960200468
 MonoBehaviour:
@@ -4543,6 +4543,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 0ed2c272007c5d046b58d60a8f5f3468, type: 3}
       propertyPath: m_Name
       value: Waldo_hand
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0ed2c272007c5d046b58d60a8f5f3468, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

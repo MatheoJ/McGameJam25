@@ -96,6 +96,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -174.16
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 93f9e1f6b3f767d498b1c52fa67a914a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 044027dccd4d11945829b64f50fceb98, type: 2}
     - target: {fileID: 919132149155446097, guid: 93f9e1f6b3f767d498b1c52fa67a914a, type: 3}
       propertyPath: m_Name
       value: Chaise (8)
@@ -158,6 +162,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -183.883
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ae137034468987047b708142418e49f3, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 20c306432b75ba4409426926cb1243e9, type: 2}
     - target: {fileID: 919132149155446097, guid: ae137034468987047b708142418e49f3, type: 3}
       propertyPath: m_Name
       value: Desktop (5)
@@ -220,6 +228,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 1.173
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 44351a674cae516449c757179f421dba, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 229b9f6374cf7c74bb99431b38c14f98, type: 2}
     - target: {fileID: 919132149155446097, guid: 44351a674cae516449c757179f421dba, type: 3}
       propertyPath: m_Name
       value: Bureau (6)
@@ -290,6 +302,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -190.498
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 93f9e1f6b3f767d498b1c52fa67a914a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 044027dccd4d11945829b64f50fceb98, type: 2}
     - target: {fileID: 919132149155446097, guid: 93f9e1f6b3f767d498b1c52fa67a914a, type: 3}
       propertyPath: m_Name
       value: Chaise (9)
@@ -364,6 +380,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -174.874
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 47e29e8bec8a44b4ca7a56b4147da2d2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: a6fe3bf3b2a05d74f83dd1b3fe04d46d, type: 2}
     - target: {fileID: 919132149155446097, guid: 47e29e8bec8a44b4ca7a56b4147da2d2, type: 3}
       propertyPath: m_Name
       value: Laptop (2)

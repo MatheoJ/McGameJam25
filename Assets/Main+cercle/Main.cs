@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class Main : MonoBehaviour
 {
@@ -56,6 +57,7 @@ public class Main : MonoBehaviour
     public void PlayerHit()
     {
         Debug.Log("UR DED");
+        SceneManager.LoadScene(2);
     }
 
 }
