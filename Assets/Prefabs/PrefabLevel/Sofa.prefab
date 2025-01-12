@@ -9,6 +9,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 5655a8c8069173041bab2078cace8025, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5655a8c8069173041bab2078cace8025, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5655a8c8069173041bab2078cace8025, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 5655a8c8069173041bab2078cace8025, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.02
       objectReference: {fileID: 0}
@@ -48,6 +60,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 178.179
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 5655a8c8069173041bab2078cace8025, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 434114a7f1911a44ab1fdc1c56adfe95, type: 2}
     - target: {fileID: 919132149155446097, guid: 5655a8c8069173041bab2078cace8025, type: 3}
       propertyPath: m_Name
       value: Sofa
