@@ -56,7 +56,7 @@ public class Portal : MonoBehaviour
             return;
         }
         
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && other is CapsuleCollider)
         {
             
             GameObject cameraHolder = GameObject.FindGameObjectWithTag("CameraHolder");
