@@ -33,6 +33,8 @@ public class PlayerMovement : MonoBehaviour
 
     Vector3 moveDirection;
 
+    public AudioSource FootstepAudioSource; 
+
     Rigidbody rb;
 
     // ---------------- New Dash Variables ----------------
@@ -61,6 +63,8 @@ public class PlayerMovement : MonoBehaviour
 
         MyInput();
         SpeedControl();
+        
+        CheckFootsteps();
 
         // handle drag
         if (grounded)
@@ -184,4 +188,28 @@ public class PlayerMovement : MonoBehaviour
         canDash = true;
     }
     // -----------------------------------------------------
+    
+    private void CheckFootsteps()
+    {
+        // We'll check horizontal (XZ) velocity to see if the player is moving on the ground
+        Vector3 flatVel = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
+
+        // If grounded and velocity is above a small threshold
+        if (grounded && flatVel.magnitude > 0.1f)
+        {
+            // Start playing footsteps if they aren't already
+            if (!FootstepAudioSource.isPlaying)
+            {
+                FootstepAudioSource.Play();
+            }
+        }
+        else
+        {
+            // Stop footsteps if they're playing and we're not moving or not grounded
+            if (FootstepAudioSource.isPlaying)
+            {
+                FootstepAudioSource.Stop();
+            }
+        }
+    }
 }
