@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ac4403676b9bf234ea245edc36f3a21e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f1a247888d167124e85a9527c5f22f6f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 647715367006843178}
   m_Layer: 0
   m_Name: WaldoPuzzle
-  m_TagString: Untagged
+  m_TagString: Puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 1622698234057623962}
   m_Layer: 0
   m_Name: Frame
-  m_TagString: Untagged
+  m_TagString: Puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -348,7 +348,7 @@ Transform:
   m_GameObject: {fileID: 9171794856783403941}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.595, y: 0.331, z: 0}
+  m_LocalPosition: {x: -0.602, y: 0.281, z: 0}
   m_LocalScale: {x: 0.08, y: 0.08, z: -0.015199999}
   m_ConstrainProportionsScale: 1
   m_Children: []

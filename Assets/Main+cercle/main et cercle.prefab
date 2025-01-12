@@ -446,15 +446,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63fdd44a59f1bb141ad311c5a9fafa1b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.225126
+      value: 15.72
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63fdd44a59f1bb141ad311c5a9fafa1b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 25.466637
+      value: 25.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63fdd44a59f1bb141ad311c5a9fafa1b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.160735
+      value: 4.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63fdd44a59f1bb141ad311c5a9fafa1b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -500,6 +500,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7397816992057811331, guid: 63fdd44a59f1bb141ad311c5a9fafa1b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1d1339fe812f5c949b155b426bc0439c, type: 2}
     - target: {fileID: 919132149155446097, guid: 63fdd44a59f1bb141ad311c5a9fafa1b, type: 3}
       propertyPath: m_Name
       value: "main doigt point\xE9"

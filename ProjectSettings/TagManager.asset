@@ -8,6 +8,7 @@ TagManager:
   - CameraHolder
   - Portal
   - Waldo
+  - Puzzle
   layers:
   - Default
   - TransparentFX
